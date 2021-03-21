@@ -1,0 +1,19 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  annotations:
+    kubernetes.io/ingress.class: nginx
+  name: opsta-dev-web
+  namespace: student54-opsta-dev
+spec:
+  rules:
+  - host: dev.opsta.net
+    http:
+      paths:
+      - path: /student54/opsta/
+        pathType: Prefix
+        backend:
+          service:
+            name: opsta-dev-web
+            port:
+              number: 8080
