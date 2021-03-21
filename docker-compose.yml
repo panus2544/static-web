@@ -1,6 +1,6 @@
 services:
   web:
     build: .
-    image: ghcr.io/panus2544/opsta-web:dev
+    image: ghcr.io/panus2544/static-web:dev
     ports:
       - "8080:80"
