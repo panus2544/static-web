@@ -3,17 +3,17 @@ kind: Ingress
 metadata:
   annotations:
     kubernetes.io/ingress.class: nginx
-  name: static-dev-web
+  name: static-web
   namespace: student54-static-dev
 spec:
   rules:
   - host: dev.opsta.net
     http:
       paths:
-      - path: /student54/static/
+      - path: /student54/static(/|$)(.*)
         pathType: Prefix
         backend:
           service:
-            name: static-dev-web
+            name: static-web
             port:
               number: 8080
