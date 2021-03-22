@@ -1,22 +1,22 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: sstatic-web
+  name: static-dev
   namespace: student54-static-dev
   labels:
-    app: static-web
+    app: static-dev
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: static-web
+      app: static-dev
   template:
     metadata:
       labels:
-        app: static-web
+        app: static-dev
     spec:
       containers:
-      - name: static-web
+      - name: static-dev
         image: ghcr.io/panus2544/static-web:dev
         imagePullPolicy: Always
         ports:
