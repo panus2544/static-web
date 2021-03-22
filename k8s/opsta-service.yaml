@@ -1,11 +1,11 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: static-dev
+  name: static-dev-web
   namespace: student54-static-dev
 spec:
   type: ClusterIP
   ports:
-  - port: 8080
+  - port: 80
   selector:
-    app: static-dev
+    app: static-dev-web
