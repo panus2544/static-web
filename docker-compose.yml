@@ -3,4 +3,4 @@ services:
     build: .
     image: ghcr.io/panus2544/static-web:dev
     ports:
-      - "8080:80"
+      - "8080:8080"
